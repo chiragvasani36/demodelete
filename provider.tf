@@ -1,5 +1,7 @@
 provider "aws" {
   region  = "us-east-1"
+  access_key= var.aws_access_key_id1
+  secret_key= var.aws_secret_access_key1
   profile = "default"
 }
 provider "aws" {
@@ -8,7 +10,3 @@ provider "aws" {
   profile = "default"
 }
 
-locals {
-  name="ec2"
-  dns=local.name
-}
