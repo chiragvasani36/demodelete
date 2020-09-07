@@ -1,6 +1,9 @@
 resource "aws_instance" "test-inst" {
   ami           = data.aws_ami.amz.id
   instance_type = var.instance_type
+  tags = {
+    Name = "${terraform.workspace}-ec2"
+  }
 }
 
 
